@@ -63,5 +63,5 @@ if __name__ == '__main__':
         df3 = pd.read_csv(fr"test1/{i}.csv",compression='xz', sep='\t')
         df4 = pd.read_csv(fr"test1/{i}.csv",compression='xz', sep='\t')
         df = pd.concat([df1,df2,df3,df4])
-        df.to_csv(fr"test/{i}.csv", compression='xz', sep='\t', index=False)
+        df.to_csv(fr"comunas/{i}.csv", compression='xz', sep='\t', index=False)
 
