@@ -64,5 +64,5 @@ if __name__ == '__main__':
     
     for i in comunas:
         aux = df[df["organismo_nombre"] == i]
-        aux.to_csv(fr"test1/{i}.csv", compression='xz', sep='\t', index=False)
+        aux.to_csv(fr"test4/{i}.csv", compression='xz', sep='\t', index=False)
 
