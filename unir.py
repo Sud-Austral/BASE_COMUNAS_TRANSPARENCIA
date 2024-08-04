@@ -59,10 +59,9 @@ comunas = ['Corporación Municipal de Providencia',
 if __name__ == '__main__':
    for i in comunas:
         df1 = pd.read_csv(fr"test1/{i}.csv",compression='xz', sep='\t')
-        df2 = pd.read_csv(fr"test1/{i}.csv",compression='xz', sep='\t')
-        df3 = pd.read_csv(fr"test1/{i}.csv",compression='xz', sep='\t')
-        df4 = pd.read_csv(fr"test1/{i}.csv",compression='xz', sep='\t')
+        df2 = pd.read_csv(fr"test2/{i}.csv",compression='xz', sep='\t')
+        df3 = pd.read_csv(fr"test3/{i}.csv",compression='xz', sep='\t')
+        df4 = pd.read_csv(fr"test4/{i}.csv",compression='xz', sep='\t')
         df = pd.concat([df1,df2,df3,df4])
-        print(df.columns)
         df.to_csv(fr"comunas/{i}.csv", compression='xz', sep='\t', index=False)
 
