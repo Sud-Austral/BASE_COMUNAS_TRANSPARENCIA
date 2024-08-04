@@ -60,8 +60,7 @@ if __name__ == '__main__':
     df = pd.read_csv("TA_PersonalContratohonorarios.csv", sep=";",encoding="latin",usecols=PersonalContratohonorariosDICT)
     df = df.rename(columns={'remuneracionbruta': 'remuneracionbruta_mensual'})
     df["base"] = "Contratohonorarios"
-    
-    
+    print(df.columns)    
     for i in comunas:
         aux = df[df["organismo_nombre"] == i]
         aux.to_csv(fr"test4/{i}.csv", compression='xz', sep='\t', index=False)

@@ -59,6 +59,7 @@ comunas = ['Corporación Municipal de Providencia',
 if __name__ == '__main__':
     df = pd.read_csv("TA_PersonalPlanta.csv", sep=";",encoding="latin",usecols=PersonalPlantaDICT)
     df["base"] = "Planta"
+    print(df.columns)
     for i in comunas:
         aux = df[df["organismo_nombre"] == i]
         aux.to_csv(fr"test1/{i}.csv", compression='xz', sep='\t', index=False)
